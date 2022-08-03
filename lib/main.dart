@@ -1,3 +1,4 @@
+import 'package:catalog_app/utils/routes.dart';
 import "package:google_fonts/google_fonts.dart";
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
@@ -6,6 +7,8 @@ import 'pages/login_page.dart';
 void main(){
   runApp(MyApp());
 }
+
+// bhai flutter bhi sikh loge, sab likh loge bas bhagwan mat ban jana
 
 class MyApp extends StatelessWidget {
   @override
@@ -21,9 +24,8 @@ class MyApp extends StatelessWidget {
       ),
 
       routes: {
-        "/": (context)=>LoginPage(),
-        // "/": (context)=>HomePage(),
-        // "/login": (context)=>LoginPage(),
+        MyRoutes.loginRoute: (context)=>LoginPage(),
+        MyRoutes.homeRoute: (context)=>HomePage(),
       },
     );
   }
