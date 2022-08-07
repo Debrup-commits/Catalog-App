@@ -8,8 +8,6 @@ void main(){
   runApp(MyApp());
 }
 
-// bhai flutter bhi sikh loge, sab likh loge bas bhagwan mat ban jana
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
