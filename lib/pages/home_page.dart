@@ -1,3 +1,4 @@
+import 'package:catalog_app/widgets/drawer.dart';
 import "package:flutter/material.dart";
 
 class HomePage extends StatelessWidget {
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
           child: Text("first app!"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
