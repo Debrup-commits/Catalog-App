@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: MyThemes.lightTheme(context),
       darkTheme: MyThemes.darkTheme(context),
-      
 
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
