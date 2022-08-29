@@ -11,7 +11,7 @@ class CatalogHeader extends StatelessWidget {
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          "Catalog App".text.xl5.bold.color(MyThemes.darkBluishColor).make(),
+          "Catalog App".text.xl5.bold.color(context.theme.accentColor).make(),
           "Trending Products".text.xl2.make(),
         ]
       );
@@ -63,7 +63,7 @@ class CatalogItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
 
               children: [
-                catalog.name.text.lg.color(MyThemes.darkBluishColor).bold.make(),
+                catalog.name.text.lg.color(context.accentColor).bold.make(),
                 catalog.desc.text.textStyle(context.captionStyle).make(),
 
                 ButtonBar(
@@ -76,11 +76,11 @@ class CatalogItem extends StatelessWidget {
                       onPressed: (){}, 
 
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(MyThemes.darkBluishColor),
+                        backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
                         shape: MaterialStateProperty.all(StadiumBorder()),
                       ),
                       
-                      child: "Buy".text.make()
+                      child: "Add".text.make()
                     )
                   ],
                 ),
@@ -89,7 +89,7 @@ class CatalogItem extends StatelessWidget {
           )
         ],
       ),
-    ).white.rounded.square(150).make().py16();
+    ).color(context.cardColor).rounded.square(150).make().py16();
   }
 }
 
@@ -101,6 +101,6 @@ class CatalogImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.network(
       image,
-    ).box.rounded.p8.color(MyThemes.creamColor).make().p16().w40(context);
+    ).box.rounded.p8.color(context.theme.canvasColor).make().p16().w40(context);
   }
 }

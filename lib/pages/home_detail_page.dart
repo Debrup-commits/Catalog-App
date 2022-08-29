@@ -11,11 +11,11 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyThemes.creamColor,
+      appBar: AppBar(backgroundColor: Colors.transparent,),
+      backgroundColor: context.theme.canvasColor,
 
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
       
@@ -26,12 +26,12 @@ class HomeDetailPage extends StatelessWidget {
               onPressed: (){}, 
       
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(MyThemes.darkBluishColor),
+                backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
               
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to Cart".text.make(),
+            ).wh(120, 50)
           ],
         ).py8(),
       ),
@@ -52,12 +52,15 @@ class HomeDetailPage extends StatelessWidget {
                 edge: VxEdge.TOP,
 
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      catalog.name.text.xl4.color(MyThemes.darkBluishColor).bold.make(),
+                      catalog.name.text.xl4.color(context.accentColor).bold.make(),
                       catalog.desc.text.xl.textStyle(context.captionStyle).center.make(),
+
+                      "Elitr rebum et sit stet duo, et gubergren ipsum ea eos tempor tempor est. Sea gubergren nonumy gubergren eos eos,.".text.
+                      textStyle(context.captionStyle).make().py16(),
                     ],
                   ).p32(),
                 ),
