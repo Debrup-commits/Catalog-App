@@ -17,7 +17,7 @@ class Item{
       price: map["price"], 
       color: map["color"], 
       image: map["image"],
-      );
+    );
   }
 
   toMap()=>{
@@ -31,5 +31,11 @@ class Item{
 }
 
 class CatalogModel{
-   static List<Item> items=[];
+  static List<Item> items=[];
+
+  //get item by ID
+  static Item getById(int id)=>
+    items.firstWhere((element) => element.id==id, orElse: null);
+
+  static Item getByPosition(int pos) => items[pos];
 }
