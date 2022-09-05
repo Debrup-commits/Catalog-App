@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:catalog_app/utils/routes.dart';
-import 'package:catalog_app/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
